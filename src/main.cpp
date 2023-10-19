@@ -4,6 +4,7 @@
 int main(){
   
   std::cout << get() << std::endl;;
+  aa();
   std::cout << *get() << std::endl;;
   std::cout << *get() << std::endl;;
   std::cout << *get() << std::endl;;
