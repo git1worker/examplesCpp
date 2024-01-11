@@ -46,8 +46,37 @@ main ()
   return 0;
 }
 ///////////////////////////////////////////////////
+#include <stdio.h>
+typedef struct
+{
+  int a[10];
+} A;
 
+int main ()
+{
+  A *str = new A;
+  for (int i = 0; i < sizeof(*str) / sizeof(str->a[0]); ++i) {
+    str->a[i] = i;
+    printf ("%d ", str->a[i]); // Hello World 44
+  }
 
+  return 0;
+}
+///////////////////////////////////////////////////
+#include <iostream>
+
+typedef struct {
+  int a[10];
+} A;
+
+int main ()
+{
+  A *a = new A;
+  for (auto &i : a->a)
+    std::cout << i << std::endl;
+  return 0;
+}
+////////////////////////////////////////////////////////
 
 */
 
