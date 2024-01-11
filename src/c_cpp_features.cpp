@@ -26,6 +26,28 @@ main ()
 
   return 0;
 }
-*/
+//////////////////////////////////////////////////
 
+#include <stdio.h>
+#include <stdalign.h>
+
+typedef struct
+{
+  int a [10];
+  int b;
+} A;
+
+int
+main ()
+{
+  A *str = new A;
+  printf ("Hello World %ld", sizeof(*str)); // Hello World 44
+
+  return 0;
+}
+///////////////////////////////////////////////////
+
+
+
+*/
 
