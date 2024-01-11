@@ -86,6 +86,31 @@ int main()
 }
 // 0x5590e6278189, 0x5590e6278189 adresses is equally
 //////////////////////////////////////////////////////////
+#include <iostream>
+
+using namespace std;
+
+struct A {
+    //virtual ~A() = default;
+    size_t a = 10, b = 22;
+};
+
+struct B : public A {
+    int c;
+};
+
+int main()
+{
+    A* a = new A;
+    
+    unsigned char * ptr = reinterpret_cast<unsigned char*>(a);
+    cout << *reinterpret_cast<size_t*>(ptr) << ' ' << *reinterpret_cast<size_t*>(ptr+8) << endl;
+    cout << sizeof (B) ;
+  
+    delete a;
+    return 0;
+}
+//////////////////////////////////////////////////////////////
 
 */
 
